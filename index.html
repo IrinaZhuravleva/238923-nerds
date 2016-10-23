@@ -3,108 +3,160 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <style type="text/css">
+      .container{
+        .margin: 0 auto; padding: 0 20px; width: 1160px;
+      }
+     </style>
   </head>
   <body>
+
     <header class="main-header">
-          <div class="logo">
-            <img src="img/logo-1.jpg" alt="Логотип Nerds">
-          </div>
-          <nav class="main-navigation">
-            <ul>
-              <li>
-                <a href="#">Студия</a>
-              </li>
-              <li>
-                <a href="#">Клиенты</a>
-              </li>
-              <li>
-                <a href="#">Магазин</a>
-              </li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="cart">
-            <a href="#">Корзина</a>
-          </div>
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.jpg" alt="Логотип Nerds">
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Студия</a>
+            </li>
+            <li>
+              <a href="#">Клиенты</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a href="#">Корзина</a>
+        </div>
+      </div>
     </header>
-    <div class="slogan1">
-      <h2>Долго, дорого, скрупулёзно.</h2>
-      <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-      <a class="btn_info" href="#">УЗНАТЬ БОЛЬШЕ</a>
+
+    <div class="slogan">
+      <div class="container">
+        <div class="slider">
+          <div class="slider-controls">
+            <input type="radio" name="slider-control" id="btn-1">
+            <input type="radio" name="slider-control" id="btn-2">
+            <input type="radio" name="slider-control" id="btn-3">
+          </div>
+          <div class="slides">
+            <div class="slide slide-1">
+              <h2>Долго, дорого, скрупулёзно.</h2>
+              <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+              <a class="btn-info" href="#">УЗНАТЬ БОЛЬШЕ</a>
+            </div>
+            <div class="slide slide-2">тут контент слайда</div>
+            <div class="slide slide-3">тут контент слайда</div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="features">
-      <div class="feature-item">
-        <img src="img/feature1.jpg" alt="Веб-сайты">
-        <h2>ВЕБ-САЙТЫ</h2>
-        <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
-        <a class="btn-feature1" href="#">ЗАКАЗАТЬ</a>
-      </div>
-      <div class="feature-item">
-          <img src="img/feature2.jpg" alt="Приложения">
-        <h2>ПРИЛОЖЕНИЯ</h2>
-        <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-        <a class="btn-feature2" href="#">ЗАКАЗАТЬ</a>
-      </div>
-      <div class="feature-item">
-        <img src="img/feature3.jpg" alt="Презентации">
-        <h2>ПРЕЗЕНТАЦИИ</h2>
-        <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-        <a class="btn-feature3" href="#">ЗАКАЗАТЬ</a>
-      </div>
-    </div>
-    <div class="slogan2">
-      <div class="block1">
-        <h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
-        <p>Исповедуем приципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем, не покладая рук, как роботы.</p>
-        <br>
-        <p>ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</p>
-        <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
-        </ul>
-      </div>
-      <div class="block2">
-        <img src="img/logo2.jpg">
-        <p>С 2004 ГОДА ЛЮБИМ ТОЧНОСТЬ ВО ВСЕМ:</p>
-        <div class="numbers1">
-          <h2>146<sup>%</sup></h2>
-          <br>
-          <p>Уровень самоотдачи</p>
+      <div class="container">
+        <div class="feature-item">
+          <img src="img/feature-web.jpg" alt="Веб-сайты">
+          <h2>ВЕБ-САЙТЫ</h2>
+          <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
+          <a class="btn btn-red" href="#">ЗАКАЗАТЬ</a>
         </div>
-        <div class="numbers2">
-          <h2>100<sup>%</sup></h2>
-          <br>
-          <p>Соблюдение сроков</p>
+        <div class="feature-item">
+            <img src="img/feature-app.jpg" alt="Приложения">
+          <h2>ПРИЛОЖЕНИЯ</h2>
+          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a class="btn btn-green" href="#">ЗАКАЗАТЬ</a>
         </div>
-        <div class="numbers3">
-          <h2>50<sup>%</sup></h2>
-          <br>
-          <p>Минимальная предоплата</p>
+        <div class="feature-item">
+          <img src="img/feature-presentation.jpg" alt="Презентации">
+          <h2>ПРЕЗЕНТАЦИИ</h2>
+          <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a class="btn btn-yellow" href="#">ЗАКАЗАТЬ</a>
         </div>
       </div>
     </div>
+
+    <div class="about-us">
+      <div class="container">
+        <div class="about-us-col-left">
+          <h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
+          <div class="concept">
+            Исповедуем приципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем, не покладая рук, как роботы.
+          </div>
+          <div class="orders">
+            ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:
+          </div>
+          <ul>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div class="about-us-col-right">
+          <img src="img/about-us.jpg" alt="Про нас">
+          
+
+          <p>С 2004 ГОДА ЛЮБИМ ТОЧНОСТЬ ВО ВСЕМ:</p>
+            
+          <ul class="advantages">
+            <li class="advantage">
+              <div class="percentage">146<sup>%</sup></div>
+              <p>Уровень самоотдачи</p>
+            </li>
+            <li class="advantage">
+              <div class="percentage">100<sup>%</sup></div>
+              <p>Соблюдение сроков</p>
+            </li>
+            <li class="advantage">
+              <div class="percentage">50<sup>%</sup></div>
+              <p>Минимальная предоплата</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="clients">
-    </div>
-    <footer class="main-footer">
-      <div class="footer-top">
-        <div class="contacts">
-          <p>NЁRDS DESIGN STUDIO</p>
-          <br>
-          <p>191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8</p>
-          <br>
-          <p>тел. +7 (812) 275-75-75</p>
-          <a class="btn-contacts" href="#">НАПИШИТЕ НАМ</a>
-        </div>
+      <div class="container">
+        <img src="img/html-academy.jpg" alt="HTML Academy">
+        <img src="img/borodinski.jpg" alt="Borodinski">
+        <img src="img/pink.jpg" alt="Pink">
+        <img src="img/mishka.jpg" alt="Mishka">
       </div>
-      <div class="footer-bottom">
-        <a class="social-btn-vk" href="#"></a>
-        <a class="social-btn-f" href="#"></a>
-        <a class="social-btn-i" href="#"></a>
-        <h3>Давайте дружить, это выгодно!</h3>
-        <p>Скидка 10% для друзей из социальных сетей</p>
+    </div>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-map">
+          <div class="contacts">
+            <h3>NЁRDS DESIGN STUDIO</h3>
+            <p>191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8</p>
+            <p>тел. +7 (812) 275-75-75</p>
+            <a class="btn-contacts" href="#">НАПИШИТЕ НАМ</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <a class="social-btn social-btn-fb" href="#">
+            </a>
+            <a class="social-btn social-btn-vk" href="#">
+            </a>
+            <a class="social-btn social-btn-inst" href="#">
+            </a>
+          </div>
+          <div class="footer-bottom-right">
+            <p class="appeal">Давайте дружить, это выгодно!</p>
+            <p class="discount">Скидка 10% для друзей из социальных сетей</p>
+          </div>
+        </div>
       </div>
     </footer>
+
   </body>
 </html>
