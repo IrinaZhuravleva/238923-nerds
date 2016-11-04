@@ -2,9 +2,9 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: black;
-    font-weight: regular;
+    font-weight: normal;
     font-family: Roboto, Arial, sans-serif;
-   }
+}
 
 h1 {
     font-size: 55px;
@@ -12,7 +12,7 @@ h1 {
     color: black;
     font-weight: medium;
     font-family: Roboto, Arial, sans-serif;
-   }
+}
 
 h2 {
     font-size: 24px;
@@ -20,7 +20,7 @@ h2 {
     color: black;
     font-weight: bold;
     font-family: Roboto, Arial, sans-serif;
-   }
+}
 
 h3 {
     font-size: 18px;
@@ -28,12 +28,10 @@ h3 {
     color: black;
     font-weight: bold;
     font-family: Roboto, Arial, sans-serif;
-   }
-
+}
 
 .clearfix::after {
     content: "";
-
     display: table;
     clear: both;
 }
@@ -41,45 +39,71 @@ h3 {
 .container {
     width: 1160px;
     margin: 0 auto;
-    padding: 50px 20px 0 20px;
+    padding: 0 20px;
+
     background-color: yellow;
 }
 
 .logo {
     float: left;
     width: 160px;
-
-    background-color: #eeeeee;
     min-height: 70px;
+    background-color: #eeeeee;
 }
 
 .main-navigation {
     float: left;
     width: 840px;
-
-    background-color: #eeeeee;
     min-height: 70px;
+    background-color: #eeeeee;
 }
+
 .main-navigation li {
     display: inline-block;
 }
 
 .cart {
-    float:right;
+    float: right;
     width: 160px;
-
-    background-color: #eeeeee;
     min-height: 70px;
+    background-color: #eeeeee;
 }
 
 .slider {
-
-
-
+    position: relative;
 }
+
 .slider .slides {
     background-color: #eeeeee;
 }
+
+.slide-wrapper {
+    float: left;
+    margin-left: 20px;
+    width: 380px;
+    min-height: 380px;
+}
+
+.slider .slide-1 {
+    display: block;
+}
+
+.slider .slide-2,
+.slider .slide-3 {
+    display: none;
+}
+
+.slider-controls input {
+    position:absolute;
+    opacity: 0;
+}
+
+.slider .img {
+    float: right;
+    margin-left: 20px;
+    width: 760px;
+}
+
 .features {
     text-align: center;
     margin-top: 100px;
@@ -87,7 +111,6 @@ h3 {
     padding-bottom: 80px;
 
     background-color: red;
-
 }
 
 .feature-item {
@@ -96,70 +119,99 @@ h3 {
     width: 300px;
     height: 350px;
 
-
-
     background-color: yellow;
 }
+
 .feature-item:first-child {
     margin-left: 0;
-
 }
+
 .about-us {
     text-align: center;
+
     background-color: blue;
 }
+
 .about-us-col-left {
     float: left;
     width: 660px;
 }
+
 .about-us-col-right {
     float: right;
     width: 350px;
 }
+
 .advantages .advantage {
     float: left;
     width: 100px;
 }
+
 .clients {
     text-align: center;
-    height: 260px;
+    height: 180px;
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
 }
+
 .contacts {
-   width: 320px;
-   height: 310px;
-
-   background-color: red;
-
+    width: 320px;
+    height: 310px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 75px;
 }
+
+.footer-map {
+    margin-top: 80px;
+    position: relative;
+    display: block; /*?*/
+}
+
+.footer-map .container {
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .footer-bottom {
-    margin-top: 70px;
+    margin-top: 80px;
 
     background-color: red;
 }
+
 .footer-bottom-left {
     width: 260px;
     float: left;
 
     background-color: green;
 }
+
 .footer-bottom-right {
     width: 900px;
     float: right;
     background-color: green;
 }
+
 .page-title {
     text-align: center;
     background-color: #eeeeee;
-    height: 165px;
-    padding-top: 80px;
+    min-height: 165px;
+    padding-top: 20px;
 }
+
 .main-products .content-col-left {
     width: 260px;
     float: left;
 }
+
 .main-products .content-col-right {
     width: 760px;
     float: right;
     margin-left: 140px;
-
 }
