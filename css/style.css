@@ -44,11 +44,14 @@ h3 {
     background-color: yellow;
 }
 
+.main-header {
+    background-color: #eeeeee;
+}
+
 .logo {
     float: left;
     width: 160px;
     min-height: 70px;
-    background-color: #eeeeee;
 }
 
 .main-navigation {
@@ -71,9 +74,6 @@ h3 {
 
 .slider {
     position: relative;
-}
-
-.slider .slides {
     background-color: #eeeeee;
 }
 
@@ -81,16 +81,21 @@ h3 {
     float: left;
     margin-left: 20px;
     width: 380px;
-    min-height: 380px;
+    min-height: 410px;
+    position: relative;
 }
 
-.slider .slide-1 {
+.slide {
+    display: none;
+}
+
+.slide-1 {
     display: block;
 }
 
-.slider .slide-2,
-.slider .slide-3 {
-    display: none;
+.slide img {
+    position: absolute;
+    height: 100%;
 }
 
 .slider-controls input {
@@ -128,8 +133,13 @@ h3 {
 
 .about-us {
     text-align: center;
+    padding-top: 30px;
 
-    background-color: blue;
+    /*background-color: blue;*/
+}
+
+.about .container {
+    border-top: 2px solid #eeeeee;
 }
 
 .about-us-col-left {
@@ -149,7 +159,9 @@ h3 {
 
 .clients {
     text-align: center;
-    height: 180px;
+    padding-top: 30px;
+}
+.clients .container {
     border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
 }
@@ -214,4 +226,15 @@ h3 {
     width: 760px;
     float: right;
     margin-left: 140px;
+}
+.product-card {
+    float: left;
+}
+
+.product-card:nth-of-type(2n){
+    float: right;
+}
+
+.product-card-details {
+    display: none;
 }
