@@ -4,6 +4,7 @@ body {
     color: black;
     font-weight: normal;
     font-family: Roboto, Arial, sans-serif;
+    margin: 0;
 }
 
 h1 {
@@ -227,12 +228,19 @@ h3 {
     float: right;
     margin-left: 140px;
 }
+
+.products {
+    font-size: 0;
+}
+
 .product-card {
-    float: left;
+    width: 360px;
+    padding-bottom: 40px;
+    display: inline-block;
 }
 
 .product-card:nth-of-type(2n){
-    float: right;
+    margin-left: 40px;
 }
 
 .product-card-details {
