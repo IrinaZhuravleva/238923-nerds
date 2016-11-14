@@ -20,7 +20,7 @@ h2 {
     font-size: 45px;
     line-height: 45px;
     color: black;
-    font-weight: bold;
+    font-weight: medium;
     font-family: Roboto, Arial, sans-serif;
 }
 
@@ -50,9 +50,7 @@ h3 {
 
 .logo {
     float: left;
-
     width: 160px;
-    /*min-height: 70px;*/
     margin-top: 50px;
 }
 
@@ -73,21 +71,24 @@ h3 {
     margin-left: 145px;
 }
 .main-navigation ul {
-    margin-top: 0;
-    margin-left: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
     list-style: none;
+    margin-left: 35px;
 }
 
 .main-navigation li {
     display: inline-block;
     vertical-align: top;
+    font-size: 16px;
+    font-weight: 500;
 
 }
 .main-navigation li a {
-  display: block;
-  padding: 0 20px;
+    display: block;
+    padding: 0 23px;
 }
-
 
 .main-navigation li a,
 .cart a {
@@ -106,58 +107,92 @@ h3 {
     min-height: 70px;
     background-color: #eeeeee;
     margin-top: 80px;
-
+    text-align: right
 }
+
 .cart a{
-    padding-left: 85px;
+    padding-left: 43px;
     position: relative;
 }
 
 .cart a::before {
     display: block;
-    /*background-color: #fb565a;*/
     content: "";
     position: absolute;
-    top: -1px;
-    left: 42px;
+    top: -3px;
+    left: 0px;
     width: 24px;
     height: 24px;
-
-  background: url("../img/cart-icon.png") no-repeat;
-  background-position: center;
+    background: url("../img/cart-icon.png") no-repeat;
+    background-position: center;
 }
 
 .slider {
     position: relative;
     background-color: #eeeeee;
 }
+/*&*/
+.slider-controls {
+    margin-bottom: 10px;
+    text-align: center;
+}
 
+.slider-controls label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.8);
+    margin: 0 3px;
+    cursor: pointer;
+    z-index: 3;
+}
+.slider input[type=radio] {
+    display: none;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-color: #666666;
+}
+/*&*/
 .slide-wrapper {
     float: left;
-    margin-left: 20px;
-    width: 380px;
-    min-height: 410px;
+    width: 560px;
+    min-height: 395px;
     position: relative;
+    z-index: 3;
+}
+
+#btn-1:checked ~ .slides .slide {
+    transform: translate(0);
+}
+
+#btn-2:checked ~ .slides .slide {
+    transform: translate(-450px);
+}
+
+#btn-3:checked ~ .slides .slide{
+    transform: translate(-900px);
 }
 
 .slide {
     display: none;
+    position: relative;
 }
+
 .slide-motto {
     font-size: 55px;
     line-height: 55px;
     margin-top: 44px;
-    margin-left: -20px;
-    /*display: inline-block;*/
 }
+
 .slide-description {
     font-size: 16px;
     color: #283136;
     margin-top: 25px;
     font-size: 16px;
     line-height: 24px;
-    margin-left: -20px;
-
 }
 
 .slides .btn-info {
@@ -166,35 +201,36 @@ h3 {
     width: 240px;
     text-align: center;
     color: white;
-    margin-left: -20px;
-    margin-top: 41px;
-    padding-top: 13px;
+    margin-top: 40px;
+    padding-top: 10px;
     padding-bottom: 13px;
     border-radius: 2px;
     text-decoration: none;
-
+    border-top: 3px solid #fb565a;
 }
+
 .slides .btn-info:hover {
     background-color: #e74246;
+    border-top: 3px solid #e74246;
 }
 
 .slides .btn-info:active {
-    background-color: #d7373b;
-    color: #e38384;
-
+    background-color: (215,55,59);
+    border-top: 3px solid #c13135;
+    color: rgba(255,255,255,0.3)
 }
 
 .slide-1 {
     display: block;
+}
 
+.slide-1 img {
+    right: 171px;
+    top: 0px;
 }
 
 .slide img {
     position: absolute;
-   /* height: 100%;
-    margin-top: -30px;
-    margin-left: 20px;*/
-    height: 105%;
     margin-top: -35px;
 }
 
@@ -207,11 +243,13 @@ h3 {
     float: right;
     margin-left: 20px;
     width: 760px;
+    min-height: 395px;
+    z-index: 2;
 }
 
 .features {
-    margin-top: 66px;
-    padding-bottom: 80px;
+    margin-top: 81px;
+    margin-bottom: 75px;
 }
 
 .feature-item {
@@ -224,11 +262,14 @@ h3 {
 .feature-item h2 {
     font-size: 24px;
     line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: normal;
 }
 
-.feature-item p {
+/*.feature-item p {
     margin-top: -5px;
-}
+}*/
 
 .feature-item:first-child {
     margin-left: 0;
@@ -240,51 +281,61 @@ h3 {
     width: 160px;
     text-align: center;
     color: white;
-    margin-top: 33px;
+    margin-top: 30px;
     padding-top: 13px;
-    padding-bottom: 13px;
+    padding-bottom: 12px;
     border-radius: 2px;
     text-decoration: none;
+
+
 }
 
 .feature-item .btn-red {
     background-color: #fb565a;
+    border-top: 3px solid #fb565a;
 }
 
 .feature-item .btn-red:hover {
     background-color: #e74246;
+    border-top: 3px solid #e74246;
 }
 
 .feature-item .btn-red:active {
-    background-color: #d7373b;
-    color: #e38384;
+    background-color: (215,55,59);
+    border-top: 3px solid #c13135;
+    color:rgba(255,255,255,0.3);
 }
-
 
 .feature-item .btn-green {
     background-color: #00ca74;
+    border-top: 3px solid #00ca74;
 }
 
 .feature-item .btn-green:hover {
     background-color: #00bc6c;
+    border-top: 3px solid ##00bc6c;
 }
 
 .feature-item .btn-green:active {
-    background-color: #00aa62;
-    color: #74c69c;
+    background-color: rgba(0,170,98);
+    border-top: 3px solid #009958;
+    color:rgba(255,255,255,0.3);
 }
 
 .feature-item .btn-yellow {
     background-color: #efc84a;
+    border-top: 3px solid #efc84a;
 }
 
 .feature-item .btn-yellow:hover {
     background-color: #eab534;
+    border-top: 3px solid #eab534;
 }
 
 .feature-item .btn-yellow:active {
-    background-color: #e5a722;
-    color: #edc47f;
+    background-color: rgba(229,167,34);
+    border-top: 3px solid #ce961f;
+    color:rgba(255,255,255,0.3);
 }
 
 .about-us .container {
@@ -293,19 +344,23 @@ h3 {
 
 .about-us-col-left {
     float: left;
-    width: 660px;
+    width: 750px;
     margin-top: 36px;
+
 }
 
-.about-us-col-left .concept {
-    margin-top: -8px;
+.about-us-col-left h2 {
+    font-weight: medium; /*не работает что-то */
+    padding-top: 0;
 }
+
 .about-us-col-left .orders {
-    margin-top: 42px;
+    margin-top: 36px;
 }
 .about-us-col-left ul {
-    margin-top: -3px;
-    margin-left: -3px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 36px;
 }
 .about-us-col-left li {
     list-style-type: none;
@@ -342,6 +397,8 @@ h3 {
     font-weight: bold;
     text-align: left;
     padding-left: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .about-us-col-right ul {
@@ -404,10 +461,26 @@ h3 {
     width: 300px;
     height: 50px;
     display: inline-block;
+    vertical-align: middle;
     position: relative;
     height: 90px;
     opacity: 0.6;
+    box-sizing: border-box;
+
 }
+.clients a:first-child {
+    padding-left: 0px;
+    border-left: 0px;
+    width: 280px;
+    padding-right: 20px;
+}
+
+.clients a:nth-child(4n) {
+    padding-left: 20px;
+    width: 280px;
+
+}
+
 .clients a:hover {
     opacity: 1;
 }
@@ -416,52 +489,27 @@ h3 {
 }
 
 .clients img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-.clients a:before {
-display: block;
-content: "";
-width: 1px;
-height: 55px;
-left: 0;
-background-color: grey;
-position: absolute;
-top: 50%;
-transform: translateX(-50%) translateY(-50%);
-}
-
-.clients a:first-child {
-    padding-left: 0px;
-    border-left: 0;
-    width: 280px;
-}
-
-.clients a:first-child:before {
-    display: none;
-}
-
-.clients a:last-child {
-    width: 280px;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 209px;
 }
 
 .contacts {
     width: 270px;
     height: 260px;
     background-color: white;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     padding-left: 50px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 75px;
+    left: 21px; /*сдаюсь)))*/
 }
 
 .contacts h3 {
     margin-top: 0px;
+    padding-top: 55px;
+    padding-bottom: 0;
 }
 
 
@@ -498,20 +546,21 @@ transform: translateX(-50%) translateY(-50%);
 }
 
 .footer-bottom {
-    margin-top: 35px;
-    min-height: 200px;
+   /* margin-top: 35px;*/
+    /*min-height: 200px;*/
+    padding-bottom: 70px;
 }
 
 .footer-bottom-left {
     width: 300px;
     float: left;
-    margin-top: 23px;
+    margin-top: 38px;
     /*margin-bottom: 23px;*/
 }
 
 .social-btn {
-    width:80px;
-    height:80px;
+    width:78px;
+    height:78px;
     display: inline-block;
     border-radius:50px;
     vertical-align: top;
@@ -553,6 +602,7 @@ transform: translateX(-50%) translateY(-50%);
     font-size: 36px;
     font-weight: bold;
     margin-left: 40px;
+    padding-top: 10px;
 }
 .footer-bottom-right .discount {
     font-size: 16px;
@@ -573,6 +623,8 @@ transform: translateX(-50%) translateY(-50%);
 .page-title h1 {
     font-size: 55px;
     text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
@@ -584,11 +636,40 @@ transform: translateX(-50%) translateY(-50%);
     line-height: 30px;
     font-size: 18px;
     font-weight: bold;
+    padding-top: 0;
+    padding-bottom: 0;
 
 }
 .main-products ul {
 
 }
+.content-col-left input[type=radio] {
+    display: none;
+}
+
+.content-col-left input[type=checkbox] {
+    display: none;
+}
+.net label {
+    display: /*inline-*/block;
+    width: 5px;
+    height: 5px;
+    /*margin: 0 3px;*/
+    border: 4px solid white;
+    border-radius: 50%;
+    background-color: #cccccc;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+#adaptive:checked ~ .net label[for="adaptive"],
+#fixed:checked ~ .net label[for="fixed"],
+#rubber:checked ~ .net label[for="rubber"] {
+    background-color: #666666;
+}
+/*но так они тупо не работают*/
+
+
 
 .range-filter {
     width: 259px;
@@ -598,8 +679,8 @@ transform: translateX(-50%) translateY(-50%);
     position: relative;
     height: 80px;
     height: 41px;
-      padding-top: 38px;
-      padding-right: 20px;
+    padding-top: 38px;
+    padding-right: 20px;
     padding-left: 20px;
 
     margin-bottom: 15px;
@@ -616,55 +697,72 @@ transform: translateX(-50%) translateY(-50%);
     background: #00ca74;
 }
 .range-controls .toggle {
-     position: absolute;
-  top: 30px;
-  left: 0px;
-  width: 4px;
-  height: 4px;
-  cursor: pointer;
-  border: 8px solid #fff;
-  border-radius: 50%;
-  background: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    background: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
 
 }
 .range-controls .toggle-min { /*А КАК ЖЕ ИХ СДЕЛАТЬ РАБОЧИМИ??*/
 
-  left: 50px;
+    left: 50px;
 }
 
 .range-controls .toggle-max {
-  left: 110px;
+    left: 110px;
 }
 .price-controls {
-  font-size: 0;
-  margin-bottom: 59px;
+    font-size: 0;
+    margin-bottom: 59px;
 }
 
 .price-controls label {
     font-size: 16px;
     /*text-transform: uppercase;*/
-  display: inline-block;
-  width: 50%;
+    display: inline-block;
+    width: 50%;
 }
 .max-price {
-  text-align: right; /*ЗАПОМНИТЬ ИНСТРУМЕНТ*/
+    topext-align: right; /*ЗАПОМНИТЬ ИНСТРУМЕНТ*/
 }
-
-
 .price-controls input {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-size: 16px;
-  width: 60px;
-  margin-left: 10px;
-  padding: 8px 10px;
-  text-align: center;
-  color: #283136;
-  border: none;
-  border-radius: 5px;
-  background: #f1f1f1;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    width: 60px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
 
 }
+.content-col-left ul {
+margin-top: 16px;
+}
+.content-col-left li {
+    padding-top: 15px;
+}
+.content-col-left li:first-child {
+    padding-top: 0;
+}
+
+.content-col-left label {
+
+}
+.main-products-features h2 {
+    margin-top: 43px;
+}
+
+
+
 
 /*продолжение*/
 .main-products .content-col-right {
@@ -706,7 +804,7 @@ transform: translateX(-50%) translateY(-50%);
     opacity: 1;
 
 }
-
+/*.sort-links */
 
 
 .sort-links a{
@@ -737,21 +835,74 @@ transform: translateX(-50%) translateY(-50%);
 
 .product-card {
     width: 360px;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
     display: inline-block;
-
-
-}
-.product-card img{
+    position: relative;
     border-top: 40px solid #e9e9e9;
 }
-.product-card img:hover{
+/* непонятные три точки - и как их распихивать по другим правилам
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 0;
+}
+
+.product-card {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+  margin-right: 2%;
+  width: 49%;
+  min-height: 300px;
+  background-color: #ccc;
+  border-top: 40px solid #ddd;
+}
+
+.product-card:nth-child(even) {
+  margin-right: 0;
+}
+
+.product-card:before {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: 16px;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 23px 0px 0px 0px #fff, 46px 0px 0px 0px #fff;
+}
+
+.hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #434343;
+}
+
+.product-card:hover .hover {
+  display: block;
+}
+*/
+
+
+.product-card:hover{
+    box-shadow: 0 0 10px #cccccc;
     border-top: 40px solid #4d4d4d;
 }
 
 
 .product-card:nth-of-type(2n){
-    margin-left: 40px;
+    margin-left: 32px; /*вместо 40*/
 }
 .sorting {
     margin-bottom: 37px;
@@ -759,8 +910,8 @@ transform: translateX(-50%) translateY(-50%);
 .sort-arrows button {
 
     background-repeat: no-repeat;
-  background-position: center;
-  width: 9px;
+    background-position: center;
+    width: 9px;
     height: 9px;
     display: inline-block;
     background-color: white;
@@ -772,28 +923,102 @@ transform: translateX(-50%) translateY(-50%);
 .down {
     background-image: url("../img/sort-down.png");
 }
-.pagination {
-    margin-left: -10px;
+
+.product-card {
+    border: 2px solid #e1e1e1;
+}
+
+
+.product-card:hover .product-card-details {
+    display: block;
+}
+.product-card:hover {
+    border: 2px solid #e1e1e1;
 }
 
 .product-card-details {
     display: none;
+    position: absolute;
+    bottom: 37px;
+    background: #eeeeee;
+    width: 100%;
+    min-height: 230px;
+
 }
+.product-card-details h3 {
+    padding-top: 33px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+.product-card-details a {
+    text-decoration: none;
+    color: black;
+}
+.product-card-description {
+    /*font-weight: normal;*/
+    display: block;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    padding-top: 25px;
+}
+
+button.product-card-price {
+    display: block;
+    margin: 0px auto;
+
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: medium;
+    margin-top: 40px;
+    padding-top: 14px;
+    padding-bottom: 17px;
+
+
+
+    border: 0;
+    background-color: #fb565a;
+    border-top: 3px solid #fb565a;
+    border-radius: 2px;
+    outline: none;
+}
+
+button.product-card-price:hover {
+    background-color: #e74246;
+    border-top: 3px solid #e74246;
+}
+
+button.product-card-price:active {
+    background-color: (215,55,59);
+    border-top: 3px solid #c13135;
+    color: rgba(255,255,255,0.3);
+
+}
+
+.pagination {
+    margin-left: -10px;
+}
+
 
 .pagination a{
     display: inline-block;
-    min-width: 25px;
+    min-width: 16px;
     height: 45px;
     padding: 0 10px;
     text-align: center;
     vertical-align: middle;
-    line-height: 45px;
+    line-height: 39px;
     text-decoration: none;
     font-weight: bold;
     color: black;
     background: #eeeeee;
     border-radius: 4px;
     margin-left: 10px;
+    border: 3px solid #eeeeee;
 
 }
 .pagination .current {
@@ -801,17 +1026,28 @@ transform: translateX(-50%) translateY(-50%);
     height: 41px;
     line-height: 41px;
     background-color: white;
-    border: 4px solid #dbdbdb; /*МОЖЕТ, СДЕЛАТЬ КАК ВНУТРЕННЮЮ ТЕНЬ? А ТО КАРТА СБИВАЕТСЯ*/
+    border: 3px solid #dbdbdb;
 }
 
 .pagination a:hover {
     background-color: #dfdfdf;
+    border: 3px solid #dfdfdf;
 }
 .pagination a:active {
     color: #a9a9a9;
     background-color: #d5d5d5;
+    border: 0px;
     border-top: 2px solid #bfbfbf;
 }
 .pagination a:last-child {
     padding: 0px 80px;
+}
+form li {
+list-style-type: none;
+
+
+}
+
+form ul {
+    padding: 0 0
 }

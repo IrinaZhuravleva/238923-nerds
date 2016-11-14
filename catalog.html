@@ -2,9 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Нёрдс Каталог</title>
   </head>
   <body>
@@ -60,46 +60,56 @@
 
       <!-- другие элементы формы -->
 
-    </form>
-
-          <h2>СЕТКА:</h2>
-          <ul>
-            <li><label>
-              <input type="radio" name="net" id="adaptive" value="adaptive" checked>Адаптивная
-            </label></li>
-            <li><label>
-              <input type="radio" name="net" id="fixed" value="fixed">Фиксированная
-            </label></li>
-            <li><label>
-              <input type="radio" name="net" id="rubber" value="rubber">Резиновая
-            </label></li>
-          </ul>
-          <h2>ОСОБЕННОСТИ:</h2>
-          <ul>
-            <li><label>
-              <input type="checkbox" name="feature" id="slider" value="slider" checked>Слайдер
-            </label></li>
-            <li><label>
-              <input type="checkbox" name="feature" id="advantages" value="advantages">Блок преимуществ
-            </label></li>
-            <li><label>
-              <input type="checkbox" name="feature" id="news" value="news" checked>Новости
-            </label></li>
-            <li><label>
-              <input type="checkbox" name="feature" id="gallery" value="gallery">Галерея
-            </label></li>
-            <li><label>
-              <input type="checkbox" name="feature" id="cart" value="cart">Корзина
-            </label></li>
-          </ul>
-          <input type="submit" value="ПОКАЗАТЬ">
-        </form> -->
+          <div class="net">
+            <h2>СЕТКА:</h2>
+            <ul>
+              <li>
+                  <label>
+                   <input type="radio" name="net" id="adaptive" value="adaptive" checked>
+                   Адаптивная
+                  </label>
+              </li>
+              <li><label>
+                <input type="radio" name="net" id="fixed" value="fixed">Фиксированная
+              </label></li>
+              <li><label>
+                <input type="radio" name="net" id="rubber" value="rubber">Резиновая
+              </label></li>
+            </ul>
+          </div>
+          <div class="main-products-features">
+            <h2>ОСОБЕННОСТИ:</h2>
+            <ul>
+              <li><label>
+                <input type="checkbox" name="feature" id="slider" value="slider" checked>
+                <img src="img/checkbox-on.png" alt="" style="vertical-align:middle">Слайдер
+              </label></li>
+              <li><label>
+                <input type="checkbox" name="feature" id="advantages" value="advantages">
+                <img src="img/checkbox-off.png" alt="" style="vertical-align:middle">Блок преимуществ
+              </label></li>
+              <li><label>
+                <input type="checkbox" name="feature" id="news" value="news" checked>
+                <img src="img/checkbox-on.png" alt="" style="vertical-align:middle">Новости
+              </label></li>
+              <li><label>
+                <input type="checkbox" name="feature" id="gallery" value="gallery">
+                <img src="img/checkbox-off.png" alt="" style="vertical-align:middle">Галерея
+              </label></li>
+              <li><label>
+                <input type="checkbox" name="feature" id="cart" value="cart">
+                <img src="img/checkbox-off.png" alt="" style="vertical-align:middle">Корзина
+              </label></li>
+            </ul>
+            <input type="submit" value="ПОКАЗАТЬ">
+          </div>
+        </form>
       </div>
 
       <div class="content-col-right">
         <div class="sorting clearfix">
           <h2>СОРТИРОВАТЬ</h2>
-          <div class="sort-links">
+          <div class="sort-links clearfix">
             <a href="#">ПО ЦЕНЕ</a>
             <a href="#">ПО ТИПУ</a>
             <a href="#">ПО НАЗВАНИЮ</a>
@@ -109,6 +119,14 @@
             <button type="button" class="down"></button>
           </div>
         </div>
+        <!-- <div class="wrapper">
+  <div class="product-card">
+    <div class="hover">hover</div>
+  </div>
+  <div class="product-card">
+    <div class="hover">hover</div>
+  </div>
+</div>  не поняла - куда вставлять -->
         <div class="products">
           <div class="product-card">
             <img src="img/img-sedona.jpg" alt="Sedona">
