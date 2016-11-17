@@ -5,14 +5,13 @@ body {
     font-weight: normal;
     font-family: Roboto, Arial, sans-serif;
     margin: 0;
-
 }
 
 h1 {
     font-size: 55px;
     line-height: 55px;
     color: black;
-    font-weight: medium;
+    font-weight: 500;
     font-family: Roboto, Arial, sans-serif;
 }
 
@@ -20,7 +19,7 @@ h2 {
     font-size: 45px;
     line-height: 45px;
     color: black;
-    font-weight: medium;
+    font-weight: 500;
     font-family: Roboto, Arial, sans-serif;
 }
 
@@ -28,7 +27,7 @@ h3 {
     font-size: 18px;
     line-height: 30px;
     color: black;
-    font-weight: bold;
+    font-weight: 500;
     font-family: Roboto, Arial, sans-serif;
 }
 
@@ -82,8 +81,8 @@ h3 {
     display: inline-block;
     vertical-align: top;
     font-size: 16px;
-    font-weight: 500;
-
+    /*font-weight: 500;
+*/
 }
 .main-navigation li a {
     display: block;
@@ -94,6 +93,7 @@ h3 {
 .cart a {
     text-decoration: none;
     color: black;
+    font-weight: 500;
 }
 
 .main-navigation li a:hover,
@@ -130,85 +130,107 @@ h3 {
 .slider {
     position: relative;
     background-color: #eeeeee;
-}
-/*&*/
-.slider-controls {
-    margin-bottom: 10px;
-    text-align: center;
+    height: 395px;
+    margin: 0 auto;
 }
 
-.slider-controls label {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.8);
-    margin: 0 3px;
-    cursor: pointer;
-    z-index: 3;
+.slider .container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 0px;
+    height: 100%;
+    position: relative;
 }
+
 .slider input[type=radio] {
-    display: none;
-}
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
-    background-color: #666666;
-}
-/*&*/
-.slide-wrapper {
-    float: left;
-    width: 560px;
-    min-height: 395px;
-    position: relative;
-    z-index: 3;
+    position: absolute;
+    opacity: 0;
 }
 
-#btn-1:checked ~ .slides .slide {
-    transform: translate(0);
+.slider-controls {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    width: 200px;
+    height: 10px;
+    margin-left: -100px;
+    text-align: center;
+    z-index: 1000;
 }
 
-#btn-2:checked ~ .slides .slide {
-    transform: translate(-450px);
-}
-
-#btn-3:checked ~ .slides .slide{
-    transform: translate(-900px);
-}
-
-.slide {
-    display: none;
+.slider-controls label{
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 6px;
+    margin-top: -9px;
+    background: white;
+    border: 4px solid white;
+    vertical-align: top;
+    border-radius: 50%;
+    cursor: pointer;
     position: relative;
 }
 
-.slide-motto {
-    font-size: 55px;
-    line-height: 55px;
-    margin-top: 44px;
+ /*не выстраиваются у меня по центру*/
+#btn-1:checked ~ .slider-controls label[for="btn-1"]:before,
+#btn-2:checked ~ .slider-controls label[for="btn-2"]:before,
+#btn-3:checked ~ .slider-controls label[for="btn-3"]:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: - 4px;
+    margin-top: -4px;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+    transform: translateX(-50%);
 }
 
-.slide-description {
-    font-size: 16px;
-    color: #283136;
-    margin-top: 25px;
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /*overflow:hidden;*/
+}
+
+.slide-text{
     font-size: 16px;
     line-height: 24px;
+    margin-top: 43px;
+    /*padding:30px 0;*/
+    color:#283136;
+    width: 560px;
+    min-height: 395px;
 }
 
-.slides .btn-info {
+.slide-title {
+    font-size: 55px;
+    line-height: 55px;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    font-weight: 500;
+    color:black;
+}
+
+.slide .btn-info{
     display: block;
-    background-color: #fb565a;
     width: 240px;
-    text-align: center;
-    color: white;
+    padding: 10px 0;
     margin-top: 40px;
-    padding-top: 10px;
-    padding-bottom: 13px;
-    border-radius: 2px;
-    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    text-align:center;
+    text-decoration:none;
+    background:#fb565a;
+    border-radius:3px;
     border-top: 3px solid #fb565a;
 }
-
 .slides .btn-info:hover {
     background-color: #e74246;
     border-top: 3px solid #e74246;
@@ -217,34 +239,40 @@ h3 {
 .slides .btn-info:active {
     background-color: (215,55,59);
     border-top: 3px solid #c13135;
-    color: rgba(255,255,255,0.3)
+    color: rgba(255,255,255,0.3);
 }
 
-.slide-1 {
+
+.slide:nth-child(1) img {
+    position: absolute;
+    top: -35px;
+    right: 0px;
+}
+
+.slide:nth-child(2) img {
+    position: absolute;
+    top: -35px;
+    right: 0px;
+}
+
+.slide:nth-child(3) img{
+    position: absolute;
+    top: -35px;
+    right: 0px;
+}
+
+.slide{
+    display:none;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
     display: block;
 }
-
-.slide-1 img {
-    right: 171px;
-    top: 0px;
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    display: block;
 }
-
-.slide img {
-    position: absolute;
-    margin-top: -35px;
-}
-
-.slider-controls input {
-    position:absolute;
-    opacity: 0;
-}
-
-.slider .img {
-    float: right;
-    margin-left: 20px;
-    width: 760px;
-    min-height: 395px;
-    z-index: 2;
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+    display: block;
 }
 
 .features {
@@ -262,14 +290,10 @@ h3 {
 .feature-item h2 {
     font-size: 24px;
     line-height: 30px;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-weight: normal;
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-weight: bold;
 }
-
-/*.feature-item p {
-    margin-top: -5px;
-}*/
 
 .feature-item:first-child {
     margin-left: 0;
@@ -286,8 +310,6 @@ h3 {
     padding-bottom: 12px;
     border-radius: 2px;
     text-decoration: none;
-
-
 }
 
 .feature-item .btn-red {
@@ -313,13 +335,13 @@ h3 {
 
 .feature-item .btn-green:hover {
     background-color: #00bc6c;
-    border-top: 3px solid ##00bc6c;
+    border-top: 3px solid #00bc6c;
 }
 
 .feature-item .btn-green:active {
     background-color: rgba(0,170,98);
     border-top: 3px solid #009958;
-    color:rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.3);
 }
 
 .feature-item .btn-yellow {
@@ -335,7 +357,7 @@ h3 {
 .feature-item .btn-yellow:active {
     background-color: rgba(229,167,34);
     border-top: 3px solid #ce961f;
-    color:rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.3);
 }
 
 .about-us .container {
@@ -346,11 +368,10 @@ h3 {
     float: left;
     width: 750px;
     margin-top: 36px;
-
 }
 
 .about-us-col-left h2 {
-    font-weight: medium; /*не работает что-то */
+    font-weight: 500;
     padding-top: 0;
 }
 
@@ -362,12 +383,14 @@ h3 {
     margin-left: 0px;
     padding-left: 36px;
 }
+
 .about-us-col-left li {
     list-style-type: none;
     padding-top: 25px;
     color: #283136;
     position: relative;
 }
+
 .about-us-col-left li::before {
     display: block;
     width: 25px;
@@ -377,7 +400,6 @@ h3 {
     position: absolute;
     top: 36px;
     left: -36px;
-
 }
 
 .about-us-col-right {
@@ -412,6 +434,7 @@ h3 {
     font-weight: bold;
     margin-top: 35px;
 }
+
 .about-us-col-right li,
 .about-us-col-right li p {
     /*padding-left: 20px;*/
@@ -438,52 +461,72 @@ h3 {
     float: left;
     width: 100px;
 }
+
 .advantage li {
     margin-left: 0;
-
 }
 
 .clients {
-    /*text-align: center;*/
-    /*padding-top: 49px;*/
-
+    margin-top: 48px;
 }
+
 .clients .container {
     border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
-    padding-bottom: 31px;
-    margin-top: 41px;
+    padding-bottom: 40px;
+    /*margin-top: 41px;*/
     padding-top: 49px;
     text-align: center;
     font-size: 0px;
 }
+
 .clients a {
     width: 300px;
-    height: 50px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
     height: 90px;
     opacity: 0.6;
     box-sizing: border-box;
-
 }
+
+.clients a:after {
+    content: " ";
+    display: block;
+    height: 52px;
+    width: 1px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    background: grey;
+}
+
+.clients a:last-child:after {
+    display: none;
+}
+
 .clients a:first-child {
     padding-left: 0px;
     border-left: 0px;
     width: 280px;
     padding-right: 20px;
+    padding-top: 10px;
+}
+
+.clients a:nth-child(3) {
+    padding-top: 14px;
+    padding-left: 7px;
 }
 
 .clients a:nth-child(4n) {
     padding-left: 20px;
     width: 280px;
-
 }
 
 .clients a:hover {
     opacity: 1;
 }
+
 .clients a:active {
     opacity: 0.3;
 }
@@ -491,27 +534,29 @@ h3 {
 .clients img {
     display: inline-block;
     vertical-align: top;
-    min-width: 209px;
+    /*min-width: 209px;*/
 }
 
 .contacts {
-    width: 270px;
-    height: 260px;
+    width: 268px;
+    height: 305px;
     background-color: white;
-    /*padding-top: 50px;*/
     padding-left: 50px;
+    left: 21px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 21px; /*сдаюсь)))*/
+    top: 55px;
 }
 
 .contacts h3 {
     margin-top: 0px;
-    padding-top: 55px;
+    padding-top: 47px;
     padding-bottom: 0;
-}
 
+}
+.contacts p {
+    line-height: 18px;
+    padding-top: 4px;
+}
 
 .contacts .btn-contacts {
     display: block;
@@ -519,15 +564,13 @@ h3 {
     width: 220px;
     text-align: center;
     color: white;
-    margin-top: 40px;
+    margin-top: 37px;
     padding-top: 13px;
     padding-bottom: 13px;
     border-radius: 2px;
     text-decoration: none;
     background-color: #fb565a;
 }
-/*доделать*/
-
 
 .footer-map {
     margin-top: 81px;
@@ -538,23 +581,17 @@ h3 {
 }
 
 .footer-map .container {
-    background-color: transparent;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
 }
 
 .footer-bottom {
-   /* margin-top: 35px;*/
-    /*min-height: 200px;*/
     padding-bottom: 70px;
 }
 
 .footer-bottom-left {
     width: 300px;
     float: left;
-    margin-top: 38px;
+    margin-top: 70px;
     /*margin-bottom: 23px;*/
 }
 
@@ -575,43 +612,41 @@ h3 {
 
 .social-btn:active {
     background-color: #d7373b;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
     background-blend-mode: overlay;
+
 }
+
 .social-btn-fb {
     background-image: url("../img/fb-icon.png");
-
-
 }
+
  .social-btn-vk {
     background-image: url("../img/vk-icon.png");
-
 }
+
 .social-btn-inst {
     background-image: url("../img/insta-icon.png");
-
 }
-
 
 .footer-bottom-right {
     width: 800px;
     float: right;
-
-    /*background-color: green;*/
 }
+
 .footer-bottom-right .appeal {
     font-size: 36px;
     font-weight: bold;
     margin-left: 40px;
-    padding-top: 10px;
+    padding-top: 46px;
 }
+
 .footer-bottom-right .discount {
     font-size: 16px;
     color: #444444;
     margin-left: 40px;
     margin-top: -21px;
 }
-
-
 
 .page-title {
     text-align: center;
@@ -627,54 +662,25 @@ h3 {
     padding-bottom: 0;
 }
 
-
 .main-products .content-col-left {
     width: 260px;
     float: left;
 }
+
 .main-products h2 {
     line-height: 30px;
     font-size: 18px;
     font-weight: bold;
-    padding-top: 0;
-    padding-bottom: 0;
-
+    letter-spacing: 0px;
+    padding-top: 0px;
+    /*padding-bottom: 0;*/
 }
-.main-products ul {
-
-}
-.content-col-left input[type=radio] {
-    display: none;
-}
-
-.content-col-left input[type=checkbox] {
-    display: none;
-}
-.net label {
-    display: /*inline-*/block;
-    width: 5px;
-    height: 5px;
-    /*margin: 0 3px;*/
-    border: 4px solid white;
-    border-radius: 50%;
-    background-color: #cccccc;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-}
-
-#adaptive:checked ~ .net label[for="adaptive"],
-#fixed:checked ~ .net label[for="fixed"],
-#rubber:checked ~ .net label[for="rubber"] {
-    background-color: #666666;
-}
-/*но так они тупо не работают*/
-
-
 
 .range-filter {
     width: 259px;
     margin-top: 50px;
 }
+
 .range-controls {
     position: relative;
     height: 80px;
@@ -682,15 +688,16 @@ h3 {
     padding-top: 38px;
     padding-right: 20px;
     padding-left: 20px;
-
     margin-bottom: 15px;
     border-radius: 5px;
     background: #f1f1f1;
 }
+
 .range-controls .scale {
     height: 2px;
     background: #d7dcde;
 }
+
 .range-controls .bar {
     width: 70%;
     height: 2px;
@@ -709,7 +716,7 @@ h3 {
     box-shadow: 0 2px 1px 0 #cfcfcf;
 
 }
-.range-controls .toggle-min { /*А КАК ЖЕ ИХ СДЕЛАТЬ РАБОЧИМИ??*/
+.range-controls .toggle-min {
 
     left: 50px;
 }
@@ -719,12 +726,12 @@ h3 {
 }
 .price-controls {
     font-size: 0;
-    margin-bottom: 59px;
+    /*margin-bottom: 59px;*/
 }
 
 .price-controls label {
     font-size: 16px;
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     display: inline-block;
     width: 50%;
 }
@@ -744,27 +751,186 @@ h3 {
     background: #f1f1f1;
 
 }
+
+.price-controls label:nth-of-type(2) input {
+    width: 72px;
+}
+
 .content-col-left ul {
-margin-top: 16px;
-}
-.content-col-left li {
-    padding-top: 15px;
-}
-.content-col-left li:first-child {
-    padding-top: 0;
-}
-
-.content-col-left label {
+   /* margin-top: 16px; */
+    list-style-type: none;
+    padding: 0; /*круто! я сама додумалась по инспектору кода*/
 
 }
+
 .main-products-features h2 {
-    margin-top: 43px;
+    padding-top: 18px;
+    letter-spacing: 0px;
+}
+.price-controls {
+
+    margin-bottom: 59px; /*потом убрать!!!*/
+}
+
+.content-col-left input[type=radio] {
+    display: none;
+}
+
+.content-col-left input[type=radio] + label {
+    display: block;
+    margin: 10px 0;
+    line-height: 20px;
+    padding-left: 37px;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+    color: #283136;
+    /*color: rgba(0,0,0,0.6);*/
+}
+.content-col-left input[type=radio] + label:hover {
+    color: black;
+}
+
+.content-col-left input[type=radio] + label:active {
+    color: #ededed;
+}
+
+.content-col-left input[type=radio] + label::before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    border: 3px solid #b8b8b8;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 4px;
+}
+.content-col-left input[type=radio]:hover + label::before {
+    border-color: #4d4d4d;
+}
+
+.content-col-left input[type=radio]:active + label::before {
+    border-color: #ededed;
+}
+
+.content-col-left input[type=radio]:checked + label::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #b8b8b8;
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.content-col-left input[type=radio]:hover + label::after {
+    background-color: #4d4d4d;
+}
+
+.content-col-left input[type=radio]:active + label::after {
+    background-color: #ededed
 }
 
 
+.content-col-left input[type=checkbox] {
+    display: none;
+}
 
+.content-col-left input[type=checkbox] + label {
+    display: block;
+    margin: 10px 0;
+    line-height: 20px;
+    padding-left: 37px;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+.content-col-left input[type=checkbox] + label:hover {
+    color: black;
+}
 
-/*продолжение*/
+.content-col-left input[type=checkbox] + label:active {
+    color: #ededed;
+}
+
+.content-col-left input[type=checkbox] + label::before {
+    content: "";
+    /*display: block; абсолютные элементы по умолчанию становятся блочными*/
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/checkbox-off.png");
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-col-left input[type=checkbox]:hover + label::before {
+    opacity: 1;
+}
+
+.content-col-left input[type=checkbox]:active + label::before {
+    opacity: 0.3;
+}
+
+.content-col-left input[type=checkbox]:checked + label::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/checkbox-on1.png");
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.content-col-left input[type=checkbox]:hover + label::after {
+    opacity: 1;
+}
+
+.content-col-left input[type=checkbox]:active + label::after {
+    opacity: 0.3;
+}
+
+.content-col-left input[type=submit] {
+    display: block;
+    line-height: 24px;
+    color: black;
+    font-weight: 500;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 18px 90px;
+    padding-top: 15px;
+    background-color: #eeeeee;
+    margin-top: 37px;
+    border: 0;
+    border-top: 3px solid #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.content-col-left input[type=submit]:hover {
+    background-color: #dfdfdf;
+    border-top: 3px solid #dfdfdf;
+}
+
+.content-col-left input[type=submit]:active {
+    background-color: #d5d5d5;
+    border-color: #d5d5d5;
+    border-top: 3px solid #bfbfbf;
+    opacity: 0.6;
+}
+
 .main-products .content-col-right {
     width: 760px;
     float: right;
@@ -775,11 +941,16 @@ margin-top: 16px;
 
 }
 .sort-arrows {
-
+    margin-top: 20px;
     float: right;
 
 }
 .sort-arrows .up{
+    /*width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red; кнопка средствами css*/
     opacity: 0.3;
 
 }
@@ -789,10 +960,11 @@ margin-top: 16px;
 
 .sort-arrows .up:active {
     opacity: 1;
-
 }
+
 .sort-arrows .down {
     opacity: 0.3;
+    margin-right: 15px
 
 }
 
@@ -804,7 +976,9 @@ margin-top: 16px;
     opacity: 1;
 
 }
-/*.sort-links */
+/*.sort-links {
+
+}*/
 
 
 .sort-links a{
@@ -815,7 +989,8 @@ margin-top: 16px;
     display: block;
     margin-top: 20px;
     padding-left: 25px;
-    letter-spacing: -1px;
+    /*letter-spacing: -1px;*/
+    font-size: 14px;
 }
 .sort-links a:hover {
     opacity: 0.6;
@@ -833,77 +1008,7 @@ margin-top: 16px;
     margin-bottom: 26px;
 }
 
-.product-card {
-    width: 360px;
-    margin-bottom: 24px;
-    display: inline-block;
-    position: relative;
-    border-top: 40px solid #e9e9e9;
-}
-/* непонятные три точки - и как их распихивать по другим правилам
-.wrapper {
-  margin: 0 auto;
-  width: 90%;
-  font-size: 0;
-}
 
-.product-card {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 20px;
-  margin-right: 2%;
-  width: 49%;
-  min-height: 300px;
-  background-color: #ccc;
-  border-top: 40px solid #ddd;
-}
-
-.product-card:nth-child(even) {
-  margin-right: 0;
-}
-
-.product-card:before {
-  content: "";
-  position: absolute;
-  top: -26px;
-  left: 16px;
-  width: 14px;
-  height: 14px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 23px 0px 0px 0px #fff, 46px 0px 0px 0px #fff;
-}
-
-.hover {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: none;
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 20px;
-  line-height: 24px;
-  color: #fff;
-  background-color: #434343;
-}
-
-.product-card:hover .hover {
-  display: block;
-}
-*/
-
-
-.product-card:hover{
-    box-shadow: 0 0 10px #cccccc;
-    border-top: 40px solid #4d4d4d;
-}
-
-
-.product-card:nth-of-type(2n){
-    margin-left: 32px; /*вместо 40*/
-}
 .sorting {
     margin-bottom: 37px;
 }
@@ -923,30 +1028,84 @@ margin-top: 16px;
 .down {
     background-image: url("../img/sort-down.png");
 }
+.products {
+    margin-top: -3px;
+    margin-bottom: 23px;
+}
 
 .product-card {
-    border: 2px solid #e1e1e1;
+    width: 360px;
+    margin-bottom: 24px;
+    display: inline-block;
+    position: relative;
+    border-left: 2px solid #e1e1e1;
+    border-right: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
+    /*border-top: 40px solid #e9e9e9;*/
+    border-radius: 2px 2px 0px 0px;
+}
+
+.product-card:hover {
+    border-left: 2px solid #e1e1e1;
+    border-right: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
+    box-shadow: 0 0 10px #cccccc;
+/*    border-top: 40px solid #4d4d4d;*/
+}
+
+
+.product-card:nth-of-type(2n){
+    margin-left: 32px; /*вместо 40*/
 }
 
 
 .product-card:hover .product-card-details {
     display: block;
 }
-.product-card:hover {
-    border: 2px solid #e1e1e1;
+.product-card img {
+    display: block;
+}
+
+.product-card-meta {
+    position: absolute;
+    top: 0px;
+    height: 40px;
+    width: 348px;
+    background: #e1e1e1;
+    line-height: 40px;
+    padding-left: 16px;
+    border-radius: 2px 2px 0px 0px;
+    left: -2px;
+}
+
+.product-card-meta-cirle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 9px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: white;
+}
+
+.product-card:hover .product-card-meta{
+    background: #4d4d4d;
+    width: 345px;
+    left: -1px;
 }
 
 .product-card-details {
     display: none;
     position: absolute;
-    bottom: 37px;
+    bottom: 0px;
     background: #eeeeee;
     width: 100%;
     min-height: 230px;
-
+    padding-bottom: 20px;
 }
 .product-card-details h3 {
-    padding-top: 33px;
+    margin: 0 0;
+    padding-top: 44px;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -962,24 +1121,21 @@ margin-top: 16px;
     font-size: 16px;
     color: #666666;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 12px;
+    line-height: 20px;
+    margin-bottom: 28px;
 }
 
 button.product-card-price {
     display: block;
     margin: 0px auto;
-
     width: 200px;
     text-align: center;
     color: white;
     font-size: 16px;
-    font-weight: medium;
-    margin-top: 40px;
-    padding-top: 14px;
-    padding-bottom: 17px;
-
-
-
+    font-weight: 500;
+    padding-top: 16px;
+    padding-bottom: 13px;
     border: 0;
     background-color: #fb565a;
     border-top: 3px solid #fb565a;
@@ -1001,19 +1157,20 @@ button.product-card-price:active {
 
 .pagination {
     margin-left: -10px;
+    margin-bottom: -18px;
 }
 
 
 .pagination a{
     display: inline-block;
-    min-width: 16px;
-    height: 45px;
+    min-width: 24px;
+    height: 41px;
+    line-height: 41px;
     padding: 0 10px;
     text-align: center;
     vertical-align: middle;
-    line-height: 39px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     color: black;
     background: #eeeeee;
     border-radius: 4px;
@@ -1036,18 +1193,10 @@ button.product-card-price:active {
 .pagination a:active {
     color: #a9a9a9;
     background-color: #d5d5d5;
-    border: 0px;
-    border-top: 2px solid #bfbfbf;
+    border: 3px solid #d5d5d5;
+    border-top: 3px solid #bfbfbf;
 }
 .pagination a:last-child {
     padding: 0px 80px;
 }
-form li {
-list-style-type: none;
 
-
-}
-
-form ul {
-    padding: 0 0
-}

@@ -57,66 +57,59 @@
               <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
             </div>
           </div>
-
-      <!-- другие элементы формы -->
-
-          <div class="net">
-            <h2>СЕТКА:</h2>
-            <ul>
-              <li>
-                  <label>
-                   <input type="radio" name="net" id="adaptive" value="adaptive" checked>
-                   Адаптивная
-                  </label>
-              </li>
-              <li><label>
-                <input type="radio" name="net" id="fixed" value="fixed">Фиксированная
-              </label></li>
-              <li><label>
-                <input type="radio" name="net" id="rubber" value="rubber">Резиновая
-              </label></li>
-            </ul>
-          </div>
+          <h2>СЕТКА:</h2>
+          <ul>
+            <li>
+              <input type="radio" name="net" id="adaptive" value="adaptive" checked>
+              <label for="adaptive">Адаптивная</label>
+            </li>
+            <li>
+              <input type="radio" name="net" id="fixed" value="fixed">
+              <label for="fixed">Фиксированная</label>
+            </li>
+            <li>
+              <input type="radio" name="net" id="rubber" value="rubber">
+              <label for="rubber">Резиновая</label>
+            </li>
+          </ul>
           <div class="main-products-features">
             <h2>ОСОБЕННОСТИ:</h2>
             <ul>
-              <li><label>
+              <li>
                 <input type="checkbox" name="feature" id="slider" value="slider" checked>
-                <img src="img/checkbox-on.png" alt="" style="vertical-align:middle">Слайдер
-              </label></li>
-              <li><label>
+                <label for="slider">Слайдер</label></li>
+              <li>
                 <input type="checkbox" name="feature" id="advantages" value="advantages">
-                <img src="img/checkbox-off.png" alt="" style="vertical-align:middle">Блок преимуществ
-              </label></li>
-              <li><label>
+                <label for="advantages">Блок преимуществ</label>
+              </li>
+              <li>
                 <input type="checkbox" name="feature" id="news" value="news" checked>
-                <img src="img/checkbox-on.png" alt="" style="vertical-align:middle">Новости
-              </label></li>
-              <li><label>
+                <label for="news">Новости</label>
+              </li>
+              <li>
                 <input type="checkbox" name="feature" id="gallery" value="gallery">
-                <img src="img/checkbox-off.png" alt="" style="vertical-align:middle">Галерея
-              </label></li>
-              <li><label>
+                <label for="gallery">Галерея</label>
+              </li>
+              <li>
                 <input type="checkbox" name="feature" id="cart" value="cart">
-                <img src="img/checkbox-off.png" alt="" style="vertical-align:middle">Корзина
-              </label></li>
+                <label for="cart">Корзина</label>
+              </li>
             </ul>
-            <input type="submit" value="ПОКАЗАТЬ">
           </div>
+          <input type="submit" value="ПОКАЗАТЬ">
         </form>
       </div>
-
       <div class="content-col-right">
         <div class="sorting clearfix">
-          <h2>СОРТИРОВАТЬ</h2>
+          <h2>СОРТИРОВАТЬ:</h2>
           <div class="sort-links clearfix">
             <a href="#">ПО ЦЕНЕ</a>
             <a href="#">ПО ТИПУ</a>
             <a href="#">ПО НАЗВАНИЮ</a>
-          </div>
-          <div class="sort-arrows">
-            <button type="button" class="up"></button>
-            <button type="button" class="down"></button>
+            <div class="sort-arrows">
+              <button type="button" class="down"></button>
+              <button type="button" class="up"></button>
+            </div>
           </div>
         </div>
         <!-- <div class="wrapper">
@@ -129,14 +122,24 @@
 </div>  не поняла - куда вставлять -->
         <div class="products">
           <div class="product-card">
+            <div class="product-card-meta">
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+            </div>
             <img src="img/img-sedona.jpg" alt="Sedona">
             <div class="product-card-details">
               <h3><a href="#">SEDONA</a></h3>
-              <div class="product-card-description">Информационный сайт для туристов</div>
+              <div class="product-card-description">Информационный сайт<br>для туристов</div>
               <button type="button" class="product-card-price">9 900 РУБ.</button>
             </div>
           </div>
           <div class="product-card">
+            <div class="product-card-meta">
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+            </div>
             <img src="img/img-pink.jpg" alt="Pink">
             <div class="product-card-details">
               <h3><a href="#">PINK UP</a></h3>
@@ -145,6 +148,11 @@
             </div>
           </div>
           <div class="product-card">
+            <div class="product-card-meta">
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+            </div>
             <img src="img/img-barbershop.jpg" alt="Borodinski">
             <div class="product-card-details">
               <h3><a href="#">BARBERSHOP</a></h3>
@@ -153,6 +161,11 @@
             </div>
           </div>
           <div class="product-card">
+            <div class="product-card-meta">
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+            </div>
             <img src="img/img-mishka.jpg" alt="Mishka">
             <div class="product-card-details">
               <h3><a href="#">MISHKA</a></h3>
@@ -161,6 +174,11 @@
             </div>
           </div>
           <div class="product-card">
+            <div class="product-card-meta">
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+            </div>
             <img src="img/img-aplus.jpg" alt="A_plus">
             <div class="product-card-details">
               <h3><a href="#">A PLUS</a></h3>
@@ -169,6 +187,11 @@
             </div>
           </div>
           <div class="product-card">
+            <div class="product-card-meta">
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+              <div class="product-card-meta-cirle"></div>
+            </div>
             <img src="img/img-kvast.jpg" alt="Kvast">
             <div class="product-card-details">
               <h3><a href="#">КВАСТ</a></h3>
@@ -188,7 +211,7 @@
 
     <footer class="main-footer">
       <div class="footer-map">
-        <img src="img/map.jpg" alt="map">
+<!--         <img src="img/map.jpg" alt="map"> -->
         <div class="container">
           <div class="contacts">
             <h3>NЁRDS DESIGN STUDIO</h3>
