@@ -172,7 +172,6 @@ h3 {
     position: relative;
 }
 
- /*не выстраиваются у меня по центру*/
 #btn-1:checked ~ .slider-controls label[for="btn-1"]:before,
 #btn-2:checked ~ .slider-controls label[for="btn-2"]:before,
 #btn-3:checked ~ .slider-controls label[for="btn-3"]:before {
@@ -180,8 +179,9 @@ h3 {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: - 4px;
-    margin-top: -4px;
+    transform: translate(-50%, -50%);
+    /*margin-left: -4px;
+    margin-top: -4px;*/
     width: 4px;
     height: 4px;
     border: 2px solid #c1c1c1;
@@ -567,9 +567,21 @@ h3 {
     margin-top: 37px;
     padding-top: 13px;
     padding-bottom: 13px;
-    border-radius: 2px;
+    border-radius: 3px;
     text-decoration: none;
     background-color: #fb565a;
+    border-top: 3px solid #fb565a;
+}
+
+.contacts .btn-contacts:hover {
+    background-color: #e74246;
+    border-top: 3px solid #e74246;
+}
+
+.contacts .btn-contacts:active {
+    background-color: (215,55,59);
+    border-top: 3px solid #c13135;
+    color: rgba(255,255,255,0.3);
 }
 
 .footer-map {
@@ -614,7 +626,6 @@ h3 {
     background-color: #d7373b;
     box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
     background-blend-mode: overlay;
-
 }
 
 .social-btn-fb {
@@ -673,7 +684,6 @@ h3 {
     font-weight: bold;
     letter-spacing: 0px;
     padding-top: 0px;
-    /*padding-bottom: 0;*/
 }
 
 .range-filter {
@@ -703,6 +713,7 @@ h3 {
     height: 2px;
     background: #00ca74;
 }
+
 .range-controls .toggle {
     position: absolute;
     top: 30px;
@@ -714,19 +725,18 @@ h3 {
     border-radius: 50%;
     background: #ababab;
     box-shadow: 0 2px 1px 0 #cfcfcf;
-
 }
-.range-controls .toggle-min {
 
+.range-controls .toggle-min {
     left: 50px;
 }
 
 .range-controls .toggle-max {
     left: 110px;
 }
+
 .price-controls {
     font-size: 0;
-    /*margin-bottom: 59px;*/
 }
 
 .price-controls label {
@@ -736,8 +746,9 @@ h3 {
     width: 50%;
 }
 .max-price {
-    topext-align: right; /*ЗАПОМНИТЬ ИНСТРУМЕНТ*/
+    topext-align: right;
 }
+
 .price-controls input {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
@@ -749,7 +760,6 @@ h3 {
     border: none;
     border-radius: 5px;
     background: #f1f1f1;
-
 }
 
 .price-controls label:nth-of-type(2) input {
@@ -757,18 +767,16 @@ h3 {
 }
 
 .content-col-left ul {
-   /* margin-top: 16px; */
     list-style-type: none;
-    padding: 0; /*круто! я сама додумалась по инспектору кода*/
-
+    padding: 0;
 }
 
 .main-products-features h2 {
     padding-top: 18px;
     letter-spacing: 0px;
 }
-.price-controls {
 
+.price-controls {
     margin-bottom: 59px; /*потом убрать!!!*/
 }
 
@@ -787,8 +795,8 @@ h3 {
     cursor: pointer;
     padding-bottom: 10px;
     color: #283136;
-    /*color: rgba(0,0,0,0.6);*/
 }
+
 .content-col-left input[type=radio] + label:hover {
     color: black;
 }
@@ -808,6 +816,7 @@ h3 {
     top: 0px;
     left: 4px;
 }
+
 .content-col-left input[type=radio]:hover + label::before {
     border-color: #4d4d4d;
 }
@@ -835,7 +844,6 @@ h3 {
     background-color: #ededed
 }
 
-
 .content-col-left input[type=checkbox] {
     display: none;
 }
@@ -851,6 +859,7 @@ h3 {
     cursor: pointer;
     padding-bottom: 10px;
 }
+
 .content-col-left input[type=checkbox] + label:hover {
     color: black;
 }
@@ -861,7 +870,6 @@ h3 {
 
 .content-col-left input[type=checkbox] + label::before {
     content: "";
-    /*display: block; абсолютные элементы по умолчанию становятся блочными*/
     width: 25px;
     height: 25px;
     background-image: url("../img/checkbox-off.png");
@@ -880,24 +888,15 @@ h3 {
     opacity: 0.3;
 }
 
-.content-col-left input[type=checkbox]:checked + label::after {
+.content-col-left input[type=checkbox]:checked + label::before {
     content: "";
-    width: 25px;
-    height: 25px;
-    background-image: url("../img/checkbox-on1.png");
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/checkbox-on.png");
     background-repeat: no-repeat;
-    opacity: 0.6;
     position: absolute;
     top: 0;
-    left: 5px;
-}
-
-.content-col-left input[type=checkbox]:hover + label::after {
-    opacity: 1;
-}
-
-.content-col-left input[type=checkbox]:active + label::after {
-    opacity: 0.3;
+    left: 0;
 }
 
 .content-col-left input[type=submit] {
@@ -936,10 +935,11 @@ h3 {
     float: right;
     margin-left: 140px;
 }
+
 .content-col-right h2 {
     float: left;
-
 }
+
 .sort-arrows {
     margin-top: 20px;
     float: right;
@@ -952,8 +952,8 @@ h3 {
     border-right: 50px solid transparent;
     border-bottom: 100px solid red; кнопка средствами css*/
     opacity: 0.3;
-
 }
+
 .sort-arrows .up:hover {
     opacity: 0.6;
 }
@@ -965,7 +965,6 @@ h3 {
 .sort-arrows .down {
     opacity: 0.3;
     margin-right: 15px
-
 }
 
 .sort-arrows .down:hover {
@@ -974,12 +973,7 @@ h3 {
 
 .sort-arrows .down:active {
     opacity: 1;
-
 }
-/*.sort-links {
-
-}*/
-
 
 .sort-links a{
     text-decoration: none;
@@ -989,12 +983,13 @@ h3 {
     display: block;
     margin-top: 20px;
     padding-left: 25px;
-    /*letter-spacing: -1px;*/
     font-size: 14px;
 }
+
 .sort-links a:hover {
     opacity: 0.6;
 }
+
 .sort-links a:active {
     opacity: 1;
 }
@@ -1008,12 +1003,11 @@ h3 {
     margin-bottom: 26px;
 }
 
-
 .sorting {
     margin-bottom: 37px;
 }
-.sort-arrows button {
 
+.sort-arrows button {
     background-repeat: no-repeat;
     background-position: center;
     width: 9px;
@@ -1022,18 +1016,27 @@ h3 {
     background-color: white;
     border: none;
 }
+
 .up {
     background-image: url("../img/sort-up.png");
 }
+
 .down {
     background-image: url("../img/sort-down.png");
 }
+
 .products {
     margin-top: -3px;
     margin-bottom: 23px;
 }
 
-.product-card {
+
+
+
+
+/*
+отсюда лабуда*/
+ .product-card {
     width: 360px;
     margin-bottom: 24px;
     display: inline-block;
@@ -1041,8 +1044,40 @@ h3 {
     border-left: 2px solid #e1e1e1;
     border-right: 2px solid #e1e1e1;
     border-bottom: 2px solid #e1e1e1;
-    /*border-top: 40px solid #e9e9e9;*/
+    border-top: 40px solid #e9e9e9;
     border-radius: 2px 2px 0px 0px;
+ }
+
+ .product-card:hover {
+    border-left: 2px solid #e1e1e1;
+    border-right: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
+    box-shadow: 0 0 10px #cccccc;
+    border-top: 40px solid #4d4d4d;
+  }
+
+  .product-card:nth-of-type(2n){
+    margin-left: 32px; /*вместо 40*/
+ }
+
+ .product-card:hover .product-card-details {
+     display: block;
+ }
+
+ .product-card img {
+     display: block;
+ }
+
+.product-card::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 23px 0px 0px 0px white, 46px 0px 0px 0px white;
+    top: -25px;
+    left: 15px;
 }
 
 .product-card:hover {
@@ -1050,48 +1085,7 @@ h3 {
     border-right: 2px solid #e1e1e1;
     border-bottom: 2px solid #e1e1e1;
     box-shadow: 0 0 10px #cccccc;
-/*    border-top: 40px solid #4d4d4d;*/
-}
-
-
-.product-card:nth-of-type(2n){
-    margin-left: 32px; /*вместо 40*/
-}
-
-
-.product-card:hover .product-card-details {
-    display: block;
-}
-.product-card img {
-    display: block;
-}
-
-.product-card-meta {
-    position: absolute;
-    top: 0px;
-    height: 40px;
-    width: 348px;
-    background: #e1e1e1;
-    line-height: 40px;
-    padding-left: 16px;
-    border-radius: 2px 2px 0px 0px;
-    left: -2px;
-}
-
-.product-card-meta-cirle {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin-right: 9px;
-    vertical-align: middle;
-    border-radius: 50%;
-    background: white;
-}
-
-.product-card:hover .product-card-meta{
-    background: #4d4d4d;
-    width: 345px;
-    left: -1px;
+    border-top: 40px solid #4d4d4d;
 }
 
 .product-card-details {
@@ -1103,6 +1097,7 @@ h3 {
     min-height: 230px;
     padding-bottom: 20px;
 }
+
 .product-card-details h3 {
     margin: 0 0;
     padding-top: 44px;
@@ -1111,12 +1106,13 @@ h3 {
     font-size: 18px;
     color: black;
 }
+
 .product-card-details a {
     text-decoration: none;
     color: black;
 }
+
 .product-card-description {
-    /*font-weight: normal;*/
     display: block;
     font-size: 16px;
     color: #666666;
@@ -1152,14 +1148,12 @@ button.product-card-price:active {
     background-color: (215,55,59);
     border-top: 3px solid #c13135;
     color: rgba(255,255,255,0.3);
-
 }
 
 .pagination {
     margin-left: -10px;
     margin-bottom: -18px;
 }
-
 
 .pagination a{
     display: inline-block;
@@ -1176,8 +1170,8 @@ button.product-card-price:active {
     border-radius: 4px;
     margin-left: 10px;
     border: 3px solid #eeeeee;
-
 }
+
 .pagination .current {
     min-width: 21px;
     height: 41px;
@@ -1190,12 +1184,14 @@ button.product-card-price:active {
     background-color: #dfdfdf;
     border: 3px solid #dfdfdf;
 }
+
 .pagination a:active {
     color: #a9a9a9;
     background-color: #d5d5d5;
     border: 3px solid #d5d5d5;
     border-top: 3px solid #bfbfbf;
 }
+
 .pagination a:last-child {
     padding: 0px 80px;
 }
