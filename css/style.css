@@ -755,7 +755,7 @@ h3 {
 }
 
 .max-price {
-  margin-left: 28px; /*а у меня влезал, и тогда задняя стенка нижнего блока была на уровне с задней стенкой верхнего, а сейчас есть различие*/
+  margin-left: 28px;
 }
 
 .price-controls input {
@@ -1175,4 +1175,160 @@ button.product-card-price:active {
 .pagination a:last-child {
   width: 230px;
 }
+
+.modal-content {
+  position: absolute;
+  top: 2443px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 877px;
+  padding-top: 69px;
+  padding-left: 80px;
+  color: #000000;
+  background: #fff;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content h2 {
+  margin: 0;
+  padding-left: 17px;
+}
+
+.login-form label {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  margin: 0;
+  margin-right: 15px;
+  margin-bottom: 25px;
+  padding-left: 19px;
+  padding-top: 9px;
+}
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"] {
+  font-family: Roboto, Arial, sans-serif;
+  color: #c0c0c0;
+  margin: 0;
+  margin-top: 10px;
+  padding: 13px;
+  display: block;
+  width: 329px;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+  outline: none;
+}
+
+.login-form textarea {
+  font-family: Roboto, Arial, sans-serif;
+  color: #c0c0c0;
+  margin: 0;
+  margin-top: 10px;
+  padding: 13px;
+  display: block;
+  width: 728px;
+  height: 90px;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.login-form input[type="text"]:hover,
+.login-form input[type="email"]:hover,
+.login-form textarea:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.login-form input[type="text"]:active,
+.login-form input[type="email"]:active,
+.login-form textarea:active {
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.login-form input[type="text"]:invalid,
+.login-form input[type="email"]:invalid,
+.login-form textarea:invalid {
+  border: 2px solid #e74246;
+  color: #e74246;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 79px;
+  right: 100px;
+  height: 22px;
+  font-size: 0;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: rgba(251, 86, 90, 0.6);
+  border-radius: 1px;
+}
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+.modal-content-close:hover::before,
+.modal-content-close:hover::after {
+  background-color: rgba(251, 86, 90, 1);
+}
+
+.modal-content-close:active::before,
+.modal-content-close:active::after {
+  background-color: rgba(251, 86, 90, 0.3);
+}
+
+.modal-content button[type=submit] {
+  display: block;
+  background-color: #fb565a;
+  text-align: center;
+  color: #fff;
+  margin-top: 12px;
+  margin-left: 17px;
+  margin-bottom: 83px;
+  padding: 15px 83px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fb565a;
+  border: 0;
+  outline: none;
+  border-top: 3px solid #fb565a;
+  outline: none;
+}
+
+.modal-content button[type=submit]:hover {
+  background-color: #e74246;
+  border-top: 3px solid #e74246;
+}
+
+.modal-content button[type=submit]:active {
+  background-color: (215,55,59);
+  border-top: 3px solid #c13135;
+  color: rgba(255,255,255,0.3);
+}
+
+
+
 
