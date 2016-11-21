@@ -1276,6 +1276,7 @@ button.product-card-price:active {
   font-size: 0;
   background-color: #fff;
   border: 0;
+  outline: none;
   cursor: pointer;
 }
 
