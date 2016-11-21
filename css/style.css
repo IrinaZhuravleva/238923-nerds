@@ -1176,6 +1176,7 @@ button.product-card-price:active {
 }
 
 .modal-content {
+  display: none;
   z-index: 2000;
   position: fixed;
   top: 50%;
@@ -1188,6 +1189,26 @@ button.product-card-price:active {
   color: #000000;
   background: #fff;
   box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fading {
+  0%    {
+    background-color: #9f9393;
+  }
+  33%   {
+    background-color: #cccccc;
+  }
+  66%   {
+    background-color: #e5e5e5;
+  }
+  100%  {
+    background-color: #fff;
+  }
+}
+
+.modal-content-show {
+  display: block;
+  animation: fading 0.9s;
 }
 
 .modal-content h2 {
@@ -1205,6 +1226,7 @@ button.product-card-price:active {
   margin-bottom: 25px;
   padding-top: 9px;
 }
+
 .login-form label:nth-child(2n) {
   margin-right: 0;
 }
