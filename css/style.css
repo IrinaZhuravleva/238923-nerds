@@ -1176,6 +1176,7 @@ button.product-card-price:active {
 }
 
 .modal-content {
+  z-index: 2000;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1242,21 +1243,27 @@ button.product-card-price:active {
   outline: none;
 }
 
-.icon-user:hover {
+.login-form input[type="text"]:hover,
+.login-form input[type="email"]:hover,
+.login-form textarea:hover {
   border: 2px solid #b4b9bb;
 }
 
-.icon-user:focus {
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form textarea:focus {
   border: 2px solid #000000;
   color: #000000;
 }
 
-.icon-user:invalid {
+.login-form input[type="text"]:invalid,
+.login-form input[type="email"]:invalid,
+.login-form textarea:invalid {
   border: 2px solid #e74246;
   color: #e74246;
 }
 
-.icon-user .value-invalid {
+.icon-user.value-invalid {
   border: 2px solid #e74246;
   color: #e74246;
 }
