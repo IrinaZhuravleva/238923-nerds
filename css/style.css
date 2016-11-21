@@ -544,7 +544,7 @@ h3 {
   height: 305px;
   background-color: #fff;
   padding-left: 50px;
-  left: 20px;
+  left: 95px;
   position: absolute;
   top: 55px;
 }
@@ -586,6 +586,12 @@ h3 {
   color: rgba(255,255,255,0.3);
 }
 
+.footer-map iframe{
+  width: 100%;
+
+
+}
+
 .footer-map {
   margin-top: 81px;
   position: relative;
@@ -595,7 +601,8 @@ h3 {
 }
 
 .footer-map .container {
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 
 .footer-bottom {
@@ -636,6 +643,8 @@ h3 {
 
 .social-btn-vk {
   background-image: url("../img/vk-icon.png");
+  /*background-position: -10px -214px;
+  background-image: url("../img/sprite1.png");*/
 }
 
 .social-btn-inst {
@@ -1292,8 +1301,9 @@ button.product-card-price:active {
 
 .modal-content-close {
   position: absolute;
+  padding: 40px;
   top: 79px;
-  right: 100px;
+  right: 35px;
   height: 22px;
   font-size: 0;
   background-color: #fff;
