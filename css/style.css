@@ -125,15 +125,12 @@ h3 {
   display: block;
   content: "";
   position: absolute;
- top: 2px;
-    left: 1px;
-  /*width: 24px;
-  height: 24px;*/
+  top: 2px;
+  left: 1px;
   background: url("../img/sprite1.png") no-repeat;
-  /*background-position: center;*/
   width: 15px;
-    height: 15px;
-    background-position: -10px -10px;
+  height: 15px;
+  background-position: -10px -10px;
 }
 
 .slider {
@@ -641,54 +638,31 @@ h3 {
   background-blend-mode: overlay;
 }
 
-/*.social-btn-fb {
-  background-image: url("../img/fb-icon.png");
-}*/
-
-.social-btn-fb::before { /*?*/
+.social-btn-fb::before {
   display: block;
   content: "";
   position: absolute;
   top: 27px;
   left: 32px;
   background: url("../img/sprite1.png") no-repeat;
-  /*background-position: center;*/
   width: 12px;
   height: 22px;
   background-position: -10px -131px;
 }
 
-
-
-
-/*.social-btn-vk::before:active {
-  background-color: #d7373b;
-
-  background-blend-mode: overlay;
-}*/
-
-/*.social-btn-vk {
-  background-image: url("../img/vk-icon.png");
-}*/
-
-.social-btn-vk::before { /*?*/
+.social-btn-vk::before {
   display: block;
   content: "";
   position: absolute;
   top: 32px;
   left: 26px;
   background: url("../img/sprite1.png") no-repeat;
-  /*background-position: center;*/
   width: 26px;
   height: 15px;
   background-position: -10px -214px;
 }
 
-/*.social-btn-inst {
-  background-image: url("../img/insta-icon.png");
-}*/
-
-.social-btn-inst::before { /*?*/
+.social-btn-inst::before {
   display: block;
   content: "";
   position: absolute;
@@ -735,6 +709,7 @@ h3 {
 
 .page-title h1 {
   font-size: 55px;
+  font-weight: 500;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 0;
@@ -940,8 +915,6 @@ h3 {
 
 .content-col-left input[type=checkbox] + label::before {
   content: "";
- /* width: 25px;
-  height: 25px;*/
   background-image: url("../img/sprite1.png");
   background-repeat: no-repeat;
   opacity: 0.6;
@@ -949,8 +922,8 @@ h3 {
   top: -1px;
   left: 1px;
   width: 23px;
-    height: 23px;
-    background-position: -10px -45px;
+  height: 23px;
+  background-position: -10px -45px;
 }
 
 .content-col-left input[type=checkbox]:hover + label::before {
@@ -963,16 +936,14 @@ h3 {
 
 .content-col-left input[type=checkbox]:checked + label::before {
   content: "";
-  /*width: 26px;
-  height: 26px;*/
   background-image: url("../img/sprite1.png");
   background-repeat: no-repeat;
   position: absolute;
   top: -1px;
   left: 1px;
   width: 27px;
-    height: 23px;
-    background-position: -10px -88px;
+  height: 23px;
+  background-position: -10px -88px;
 }
 
 .content-col-left input[type=submit] {
@@ -1016,32 +987,20 @@ h3 {
 }
 
 .sort-arrows {
-  /*margin-top: 16px;*/
-
   float: right;
 }
 
 .sort-arrows button{
-  /*background-repeat: no-repeat;
-  background-position: center;*/
-  /*width: 9px;
-  height: 9px;*/
   display: inline-block;
-  /*display: block;
-  width: 12px;
-  height: 12px;*/
-
   background-color: #fff;
   border: none;
   outline: none;
 }
 
 .sort-arrows .down {
-  /*margin-top: 11px;*/
   margin-top: 27px;
   opacity: 0.3;
   margin-right: 17px;
-  /*background-image: url("../img/sort-down.png");*/
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -1060,7 +1019,7 @@ h3 {
 
 .sort-arrows .up {
   margin-right: -2px;
-  /*background-image: url("../img/sort-up.png");*/
+  vertical-align: middle;
   opacity: 0.3;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
