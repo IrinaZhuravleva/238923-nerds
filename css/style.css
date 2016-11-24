@@ -560,9 +560,10 @@ h3 {
   height: 305px;
   background-color: #fff;
   padding-left: 50px;
-  left: 95px;
   position: absolute;
   top: 55px;
+  left: 21%;
+  transform: translateX(-50%);
 }
 
 .contacts h3 {
@@ -731,6 +732,11 @@ h3 {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.main-products .container {
+  margin-top:37px;
 }
 
 .main-products .content-col-left {
