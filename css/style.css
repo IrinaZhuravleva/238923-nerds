@@ -54,7 +54,6 @@ h3 {
 .main-navigation {
   float: left;
   width: 660px;
-  /*min-height: 70px;*/
   background-color: #eeeeee;
   margin-top: 80px;
   margin-left: 145px;
@@ -110,7 +109,6 @@ h3 {
 .cart {
   float: right;
   width: 160px;
-  /*min-height: 70px;*/
   background-color: #eeeeee;
   margin-top: 80px;
   text-align: right
@@ -136,7 +134,7 @@ h3 {
 .slider {
   position: relative;
   background-color: #eeeeee;
-  min-height: 424px;
+  height: 424px;
   margin: 0 auto;
 }
 
@@ -164,7 +162,7 @@ h3 {
   z-index: 1000;
 }
 
-.slider-controls label{
+.slider-controls label {
   display: inline-block;
   width: 9px;
   height: 9px;
@@ -192,7 +190,7 @@ h3 {
   border-radius: 50%;
 }
 
-.slide{
+.slide {
   position:absolute;
     top:0;
     left:0;
@@ -201,13 +199,12 @@ h3 {
     overflow:hidden;
 }
 
-.slide-text{
+.slide-text {
   font-size: 16px;
   line-height: 24px;
   margin-top: 72px;
   color:#283136;
   width: 560px;
- /* min-height: 395px;*/
 }
 
 .slide-title {
@@ -220,11 +217,11 @@ h3 {
 }
 
 
-.slide-title p{
+.slide-title p {
   width: 380px;
 }
 
-.slide .btn-info{
+.slide .btn-info {
   display: block;
   width: 240px;
   padding: 10px 0;
@@ -268,7 +265,7 @@ h3 {
   background-position:100% -5px;
 }
 
-.slide{
+.slide {
   display:none;
 }
 
@@ -372,10 +369,6 @@ h3 {
   border-top: 3px solid #ce961f;
   color: rgba(255,255,255,0.3);
 }
-
-/*.about-us .container {
-  border-top: 2px solid #eeeeee;
-}*/
 
 .about-us {
   border-top: 2px solid #eeeeee;
@@ -488,8 +481,6 @@ h3 {
 
 .clients {
   margin-top: 48px;
-
-
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
   padding-bottom: 40px;
@@ -497,15 +488,6 @@ h3 {
   text-align: center;
   font-size: 0px;
 }
-
-/*.clients .container {
-  border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid #eeeeee;
-  padding-bottom: 40px;
-  padding-top: 49px;
-  text-align: center;
-  font-size: 0px;
-}*/
 
 .clients a {
   width: 300px;
@@ -574,8 +556,8 @@ h3 {
   padding-left: 50px;
   position: absolute;
   top: 55px;
-  left: 21%;
-  transform: translateX(-50%);
+  /*left: 20px;
+  transform: translateX(-50%);*/
 }
 
 .contacts h3 {
@@ -615,9 +597,8 @@ h3 {
   color: rgba(255,255,255,0.3);
 }
 
-.footer-map iframe{
+.footer-map iframe {
   width: 100%;
- /* width: 1200px;*/
   height: 415px;
   border: 0;
 }
@@ -634,6 +615,8 @@ h3 {
 .footer-map .container {
   position: absolute;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer-bottom {
@@ -656,7 +639,7 @@ h3 {
   margin-right: 10px;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; /*?*/
+  position: relative;
 }
 
 .social-btn:hover {
@@ -747,7 +730,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.main-products .container {
+.main-products.container {
   margin-top:37px;
 }
 
@@ -1075,7 +1058,7 @@ h3 {
   opacity: 1;
 }
 
-.sort-links a{
+.sort-links a {
   text-decoration: none;
   opacity: 0.3;
   color: #000;
@@ -1093,6 +1076,7 @@ h3 {
 .sort-links a:active {
   opacity: 1;
 }
+
 .sort-links a:first-child {
   margin-left: 270px;
   padding-left: 0;
@@ -1120,7 +1104,7 @@ border-top: none;
 box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.35);
 }
 
-.product-card:nth-of-type(2n){
+.product-card:nth-of-type(2n) {
   margin-left: 36px;
 }
 
@@ -1155,8 +1139,7 @@ border-top: 40px solid #4d4d4d;
   position: absolute;
   bottom: 0px;
   background: #eeeeee;
-  /*width: 100%;*/
-  width: 360px; /*не работает*/
+  width: 360px;
   min-height: 230px;
   padding-bottom: 20px;
 }
