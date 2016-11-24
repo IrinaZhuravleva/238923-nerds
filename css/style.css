@@ -156,7 +156,7 @@ h3 {
   bottom: 95px;
   left: 50%;
   width: 200px;
-  height: 10px;
+  height: 12px;
   margin-left: -100px;
   text-align: center;
   z-index: 1000;
@@ -183,7 +183,9 @@ h3 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 4px;
   height: 4px;
   border: 2px solid #c1c1c1;
@@ -556,8 +558,6 @@ h3 {
   padding-left: 50px;
   position: absolute;
   top: 55px;
-  /*left: 20px;
-  transform: translateX(-50%);*/
 }
 
 .contacts h3 {
@@ -616,7 +616,9 @@ h3 {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .footer-bottom {
@@ -1191,12 +1193,12 @@ button.product-card-price {
   font-weight: 500;
 }
 
-button.product-card-price:hover {
+.product-card-price a:hover {
   background-color: #e74246;
   border-top: 3px solid #e74246;
 }
 
-button.product-card-price:active {
+.product-card-price a:active {
   background-color: (215,55,59);
   border-top: 3px solid #c13135;
   color: rgba(255,255,255,0.3);
@@ -1254,7 +1256,9 @@ button.product-card-price:active {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 760px;
   padding-top: 69px;
   padding-left: 100px;
@@ -1262,6 +1266,21 @@ button.product-card-price:active {
   color: #000000;
   background: #fff;
   box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+@-webkit-keyframes fading {
+  0%    {
+    background-color: #9f9393;
+  }
+  33%   {
+    background-color: #cccccc;
+  }
+  66%   {
+    background-color: #e5e5e5;
+  }
+  100%  {
+    background-color: #fff;
+  }
 }
 
 @keyframes fading {
@@ -1281,7 +1300,8 @@ button.product-card-price:active {
 
 .modal-content-show {
   display: block;
-  animation: fading 0.9s;
+  -webkit-animation: fading 0.9s;
+          animation: fading 0.9s;
 }
 
 .modal-content h2 {
@@ -1389,11 +1409,15 @@ button.product-card-price:active {
 }
 
 .modal-content-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .modal-content-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .modal-content-close:hover::before,
