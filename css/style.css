@@ -136,7 +136,7 @@ h3 {
 .slider {
   position: relative;
   background-color: #eeeeee;
-  height: 421px;
+  min-height: 424px;
   margin: 0 auto;
 }
 
@@ -373,7 +373,11 @@ h3 {
   color: rgba(255,255,255,0.3);
 }
 
-.about-us .container {
+/*.about-us .container {
+  border-top: 2px solid #eeeeee;
+}*/
+
+.about-us {
   border-top: 2px solid #eeeeee;
 }
 
@@ -484,9 +488,8 @@ h3 {
 
 .clients {
   margin-top: 48px;
-}
 
-.clients .container {
+
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
   padding-bottom: 40px;
@@ -494,6 +497,15 @@ h3 {
   text-align: center;
   font-size: 0px;
 }
+
+/*.clients .container {
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 40px;
+  padding-top: 49px;
+  text-align: center;
+  font-size: 0px;
+}*/
 
 .clients a {
   width: 300px;
